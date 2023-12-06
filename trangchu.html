@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/header_and_footer.css">
+    <link rel="stylesheet" href="./assets/css/trangchu.css" />
+  </head>
+  <body class="page">
+    <header class="page__header">
+      <div class="nav__search">
+        <a class="header__logo" href="./trangchu.html" id="#top"><img class="link__image-logo" src="./assets/images/logo.jpg" alt="Secondhand Website Logo"></a>
+        <form class="search__form" id="formSearch" action="./timkiem.html" method="get">
+          <input class="form__input-text" id="myInput" type="text" name="inputKeywords" placeholder="Nhập tên sản phẩm cần tìm kiếm tại đây..." size="35">
+          <button class="form__button-icon" type="submit" title="Tìm Kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+
+      <div class="header-bars">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <nav class="header-navbar">
+        <ul class="header-navbar__ul">
+          <li class="header-navbar__li">
+            <a class="header-navbar__link header-navbar__li--active" href="./trangchu.html">Trang Chủ</a>
+          </li>
+          <li class="header-navbar__li">
+            <a class="header-navbar__link" href="./sanpham.html">Sản Phẩm</a>
+          </li>
+          <li class="header-navbar__li">
+            <a class="header-navbar__link" href="./dangky.html">Đăng Ký</a>
+          </li>
+          <li class="header-navbar__li">
+            <a class="header-navbar__link" href="./dangnhap.html">Đăng Nhập</a>
+          </li>
+          <li class="header-navbar__li">
+            <a class="header-navbar__link" href="./vechungtoi.html">Về Chúng Tôi</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page__content">
+      <div class="banner">
+        <div class="swap-banner swap-banner__photo1"><img class="photo1__img" src="./assets/images/banner1.png" alt="Secondhand Banner 1"></div>
+        <div class="swap-banner swap-banner__photo2"><img class="photo2__img" src="./assets/images/banner2.png" alt="Secondhand Banner 2"></div>
+      </div>
+      <article class="content__article">
+        <section class="menu__section">
+          <h2 class="menu__title menu__title--list1">Bạn Muốn Mua Gì?</h2>
+          <!-- Bạn Muốn Mua Gì? -->
+          <section class="menu-product">
+            <div class="menu-product__item product__clothes">
+              <a class="clothes__link-img" href="./sanpham.html">
+                <img class="clothes__photo" src="./assets/images/quan_ao_quang_cao.jpg" alt="Ảnh Quảng Cáo Quần Áo">
+              </a>
+              <a class="clothes__link-text" href="./sanpham.html">Quần Áo - Thời Trang</a>
+            </div>
+            <div class="menu-product__item product__books">
+              <a class="books__link" href="./sanpham.html">
+                <img class="books__photo" src="./assets/images/sach_giao_trinh_quang_cao.jpg" alt="Ảnh Quảng Cáo Sách Giáo Trình">
+              </a>
+              <a class="books__link-text" href="./sanpham.html">Sách - Giáo Trình</a>
+            </div>
+            <div class="menu-product__item product__another-products">
+              <a class="another-products__link" href="./sanpham.html">
+                <img class="another-products__photo" src="./assets/images/vat_dung_thiet_yeu_quang_cao.jpg" alt="Ảnh Quảng Cáo Vật Dụng Thiết Yếu">
+              </a>
+              <a class="another-products__link-text" href="./sanpham.html">Các Sản Phẩm Thiết Yếu Khác</a>
+            </div>
+          </section>
+          <h2 class="menu__title menu__title--list2">Sản Phẩm Vừa Đăng</h2>
+          <!-- Sản Phẩm Vừa Đăng -->
+          <section class="just-posted-product">
+            <div class="just-posted__item just-posted__product1">
+              <a class="just-posted__link-img" href="./sanpham.html">
+                <img class="just-posted__photo1" src="./assets/images/conan_97_1.jpg" alt="Ảnh Truyện Tranh Conan Tập 97">
+              </a>
+              <a class="just-posted__link-text" href="./sanpham.html">Truyện Tranh Conan Tập...</a>
+              <span class="just-posted-product__cost product__cost">15000</span>
+              <a class="just-posted-product__detail-link" href="./sanpham.html">Xem Chi Tiết>></a>
+            </div>
+            <div class="just-posted__item just-posted__product2">
+              <a class="just-posted__link-img" href="./sanpham.html">
+                <img class="just-posted__photo2" src="./assets/images/giao_trinh_mln_1.jpg" alt="Ảnh Sách Giáo Trình CNMLN">
+              </a>
+              <a class="just-posted__link-text" href="./sanpham.html">Giáo Trình Chủ Nghĩa Mác...</a>
+              <span class="just-posted-product__cost product__cost">40000</span>
+              <a class="just-posted-product__detail-link" href="./sanpham.html">Xem Chi Tiết>></a>
+            </div>
+            <div class="just-posted__item just-posted__product3">
+              <a class="just-posted__link-img" href="./sanpham.html">
+                <img class="just-posted__photo3" src="./assets/images/ao_gio_supreme.jpg" alt="Ảnh Áo Gió Supreme">
+              </a>
+              <a class="just-posted__link-text" href="./sanpham.html">Áo Gió Supreme Nam Màu...</a>
+              <span class="just-posted-product__cost product__cost">150000</span>
+              <a class="just-posted-product__detail-link" href="./sanpham.html">Xem Chi Tiết>></a>
+            </div>
+            <div class="just-posted__item just-posted__product4">
+              <a class="just-posted__link-img" href="./sanpham.html">
+                <img class="just-posted__photo4" src="./assets/images/giao_trinh_triet1.jpg" alt="Ảnh Sách Giáo Trình Triết Học MLN">
+              </a>
+              <a class="just-posted__link-text" href="./sanpham.html">Giáo Trình Triết Học Mác...</a>
+              <span class="just-posted-product__cost product__cost">40000</span>
+              <a class="just-posted-product__detail-link" href="./sanpham.html">Xem Chi Tiết>></a>
+            </div>
+          </section>
+          <h2 class="menu__title menu__title--list3">Sản Phẩm Miễn Phí</h2>
+          <!-- Sản Phẩm Miễn Phí -->
+          <section class="free-product">
+            <div class="free__item free__product1">
+              <a class="free__link-img" href="./sanpham.html">
+                <img class="free__photo1" src="./assets/images/truyen-naoko.jpg" alt="Ảnh Truyện Tranh Thủy Thủ Mặt Trăng">
+              </a>
+              <a class="free__link-text" href="./sanpham.html">Truyện Tranh Thủy Thủ...</a>
+              <span class="free-product__cost product__cost">0</span>
+              <a class="free-product__detail-link" href="./sanpham.html">Xem Chi Tiết>></a>
+            </div>
+            <div class="free__item free__product2">
+              <a class="free__link-img" href="./sanpham.html">
+                <img class="free__photo2" src="./assets/images/truyen-doraemon.jpg" alt="Ảnh Truyện Tranh Doraemon Tập 14">
+              </a>
+              <a class="free__link-text" href="./sanpham.html">Truyện Tranh Doraemon...</a>
+              <span class="free-product__cost product__cost">0</span>
+              <a class="free-product__detail-link" href="./sanpham.html">Xem Chi Tiết>></a>
+            </div>
+            <div class="free__item free__product3">
+              <a class="free__link-img" href="./sanpham.html">
+                <img class="free__photo3" src="./assets/images/nuoc_rua_kinh_lens_clean_spray.jpg" alt="Ảnh Nước Rửa Kính Spray">
+              </a>
+              <a class="free__link-text" href="./sanpham.html">Nước Rửa Kính Spray Chai...</a>
+              <span class="free-product__cost product__cost">0</span>
+              <a class="free-product__detail-link" href="./sanpham.html">Xem Chi Tiết>></a>
+            </div>
+            <div class="free__item free__product4">
+              <a class="free__link-img" href="./sanpham.html">
+                <img class="free__photo4" src="./assets/images/cac_bai_toan_kho_hoa_vo_co.jpg" alt="Ảnh Sách Giải Chi Tiết Các Bài Toán Khó Hóa Vô Cơ">
+              </a>
+              <a class="free__link-text" href="./sanpham.html">Giải Chi Tiết Các Bài Toán...</a>
+              <span class="free-product__cost product__cost">0</span>
+              <a class="free-product__detail-link" href="./sanpham.html">Xem Chi Tiết>></a>
+            </div>
+          </section>
+        </section>
+        <!-- Bạn Có Biết? -->
+        <section class="advice-content__section">
+          <div class="advice-content__left">
+            <h1 class="advice-content__title">Bạn Có Biết</h1>
+            <p class="advice-content__text">
+              Mỗi sản phẩm cũ được tái sử dụng lại chính là một phần 
+              đóng góp nhỏ trong việc bảo vệ môi trường,
+              giúp cho hành tinh xanh của chúng ta được trong lành hơn... 
+              <a class="advice-content_detail" href="./vechungtoi.html">Xem Chi Tiết>></a>
+            </p>
+          </div>
+          <div class="advice-content__right"><img class="advice-photo__img" src="./assets/images/advice-img.jpg" alt="Ảnh Hành Tinh Xanh"></div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="page__footer">
+      <div class="footer-items">
+        <div class="footer-items__box1">
+          <h3 class="footer-items__box1--title">CHĂM SÓC KHÁCH HÀNG</h3>
+          <div class="footer-items__box1--content">
+            <p><a href="./vechungtoi.html">Giới Thiệu</a></p>
+            <p><a href="./vechungtoi.html">Liên Hệ</a></p>
+            <p><a href="./vechungtoi.html">Chính Sách Vận Chuyển</a></p>
+            <p><a href="./vechungtoi.html">Chính Sách Hoàn Tiền</a></p>
+            <p><a href="./vechungtoi.html">Câu Hỏi Thường Gặp</a></p>
+            <p><a href="./vechungtoi.html">Bảo Mật Thông Tin</a></p>
+            <p><a href="./vechungtoi.html">Tại Sao Nên Chọn TDS Corporation?</a></p>
+          </div>
+        </div>
+        <div class="footer-items__box2">
+          <h3 class="footer-items__box2--title">THỜI GIAN LÀM VIỆC</h3>
+          <div class="footer-items__box2--content">
+            <ul class="work-timing">
+              <li>Thứ Hai: 07:30 - 22:00</li>
+              <li>Thứ Ba: 07:30 - 22:00</li>
+              <li>Thứ Tư: 07:30 - 22:00</li>
+              <li>Thứ Năm: 07:30 - 22:00</li>
+              <li>Thứ Sáu: 07:30 - 22:00</li>
+              <li>Thứ Bảy: 07:30 - 22:00</li>
+              <li>Chủ Nhật: 07:30 - 22:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-items__box3">
+          <h3 class="footer-items__box3--title">KẾT NỐI VỚI CHÚNG TÔI</h3>
+          <div class="footer-items__box3--content">
+            <a class="contact-us-facebook__link" href="https://www.facebook.com/"><img class="facebook-icon" src="./assets/images/fb.jpg" alt="Ảnh icon facebook"></a>
+            <a class="contact-us-instagram__link" href="https://www.instagram.com/"><img class="instagram-icon" src="./assets/images/instagram.jpg" alt="Ảnh icon instagram"></a>
+            <a class="contact-us-twitter__link" href="https://www.twitter.com/"><img class="twitter-icon" src="./assets/images/twitter.jpg" alt="Ảnh icon twitter"></a>
+            <a class="contact-us-pinterest__link" href="https://www.pinterest.com/"><img class="pinterest-icon" src="./assets/images/pinterest.jpg" alt="Ảnh icon pinterest"></a>
+          </div>  
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <hr>
+        <p class="footer-copyright__text">&copy Bản quyền thuộc về TDS Corporation</p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/barscript.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/slick_trangchu.js"></script>
+    <script>
+      const prices = document.querySelectorAll('.product__cost');
+      prices.forEach(item => {
+        item.innerHTML = Number(item.innerText).toLocaleString('de-DE', {style : 'currency', currency : 'VND'});
+      });
+    </script>
+  </body>
+</html>

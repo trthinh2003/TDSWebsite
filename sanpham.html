@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản Phẩm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/header_and_footer.css">
+    <link rel="stylesheet" href="./assets/css/sanpham.css" />
+  </head>
+  <body class="page">
+    <header class="page__header">
+      <div class="nav__search">
+        <a class="header__logo" href="./trangchu.html" id="#top"><img class="link__image-logo" src="./assets/images/logo.jpg" alt="Secondhand Website Logo"></a>
+        <form class="search__form" id="formSearch" action="./timkiem.html" method="get">
+          <input class="form__input-text" id="myInput" type="text" name="inputKeywords" placeholder="Nhập sản phẩm cần tìm kiếm tại đây..." size="35">
+          <button class="form__button-icon" type="submit" title="Tìm Kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <button class="form__button-icon shopping-cart" type="submit" title="Giỏ Hàng"><i class="fa fa-shopping-cart form__icon-cart"></i></button>
+      </div>
+
+      <div class="header-bars">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <nav class="header-navbar">
+        <ul class="header-navbar__ul">
+          <li class="header-navbar__li">
+            <a class="header-navbar__link" href="./trangchu.html">Trang Chủ</a>
+          </li>
+          <li class="header-navbar__li">
+            <a class="header-navbar__link header-navbar__li--active" href="./sanpham.html">Sản Phẩm</a>
+          </li>
+          <li class="header-navbar__li">
+            <a class="header-navbar__link" href="./dangky.html">Đăng Ký</a>
+          </li>
+          <li class="header-navbar__li">
+            <a class="header-navbar__link" href="./dangnhap.html">Đăng Nhập</a>
+          </li>
+          <li class="header-navbar__li">
+            <a class="header-navbar__link" href="./vechungtoi.html">Về Chúng Tôi</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="modal js-modal">
+      <div class="modal-container js-modal-container">
+        <div class="modal-close js-modal-close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="modal-header">
+          <i class="fa-solid fa-bag-shopping"></i>
+          Đặt Hàng
+        </div>
+        <div class="modal-body">
+          
+          <label class="modal-label" for="product-quantity">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Nhập vào số lượng
+          </label>
+          <input id="product-quantity" type="text" class="modal-input" placeholder="Số lượng sản phẩm bạn muốn mua...">
+          
+          <label class="modal-label" for="product-email">
+            <i class="fa-solid fa-user"></i>
+            Nhập email
+          </label>
+          <input id="product-email" type="email" class="modal-input" placeholder="Nhập vào email của ban...">
+
+          <label class="modal-label" for="product-location">
+            <i class="fas fa-home"></i>
+            Nhập địa chỉ
+          </label>
+          <input id="product-location" type="text" class="modal-input" placeholder="Nhập vào địa chỉ bạn muốn giao hàng...">
+
+          <label class="modal-label" for="product-phone">
+            <i class="fas fa-phone-alt"></i>
+            Số điện thoại liên hệ
+          </label>
+          <input id="product-phone" type="text" class="modal-input" placeholder="Nhập vào số điện thoại của bạn...">
+        
+          <button id="buy-product">
+            Đặt
+            <i class="fa-solid fa-check"></i>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <p class="modal-help">Cần <a href="./vechungtoi.html">giúp đỡ?</a></p>
+        </div>
+      </div>
+    </div>
+
+    <main class="page__content">
+      <div class="banner">
+        <div class="swap-banner swap-banner__photo1"><img class="photo1__img" src="./assets/images/banner1.png" alt="Secondhand Banner 1"></div>
+        <div class="swap-banner swap-banner__photo2"><img class="photo2__img" src="./assets/images/banner2.png" alt="Secondhand Banner 2"></div>
+      </div>
+      <article class="content__article">
+        <section class="menu__section">
+          <h2 class="menu__title menu__title--list1">Quần Áo - Thời Trang</h2>
+          <!-- Quần Áo - Thời Trang -->
+          <section class="clothes-model-product">
+            <div class="clothes-model__item clothes-model__product1">
+              <img class="clothes-model__photo1" src="./assets/images/ao_khoac.jpg" alt="Ảnh Áo Khoác Nữ Hồng">
+              <div class="product-item-text">
+                <p class="product-id" hidden>001</p>
+                <a class="clothes-model__link-text" href="./sanpham.html"><p>Áo Khoác Nữ Hồng</p></a>
+                <p><span class="clothes-model-product__cost product__cost">150.000</span> <u>đ</u></p>
+              </div>
+              <div class="clothes-model-product__request">
+                <button class="clothes-model-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="clothes-model-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="clothes-model__item clothes-model__product2">
+              <img class="clothes-model__photo2" src="./assets/images/ao_con_meo.jpg" alt="Ảnh Áo Con Mèo">
+              <div class="product-item-text">
+                <p class="product-id" hidden>002</p>
+                <a class="clothes-model__link-text" href="./sanpham.html"><p>Áo Thun Xanh Nam</p></a>
+                <p><span class="clothes-model-product__cost product__cost">40.000</span> <u>đ</u></p>
+              </div>
+              <div class="clothes-model-product__request">
+                <button class="clothes-model-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="clothes-model-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="clothes-model__item clothes-model__product3">
+              <img class="clothes-model__photo3" src="./assets/images/ao_gio_supreme.jpg" alt="Ảnh Áo Gió Supreme">
+              <div class="product-item-text">
+                <p class="product-id" hidden>003</p>
+                <a class="clothes-model__link-text" href="./sanpham.html"><p>Áo Gió Supreme Nam</p></a>
+                <p><span class="clothes-model-product__cost product__cost">150.000</span> <u>đ</u></p>
+              </div>
+              <div class="clothes-model-product__request">
+                <button class="clothes-model-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="clothes-model-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="clothes-model__item clothes-model__product4">
+              <img class="clothes-model__photo4" src="./assets/images/ao_thun_otis.jpg" alt="Ảnh Áo Thun Otis">
+              <div class="product-item-text">               
+                <p class="product-id" hidden>004</p>
+                <a class="clothes-model__link-text" href="./sanpham.html"><p>Áo Thun Otis Nữ</p></a>
+                <p><span class="clothes-model-product__cost product__cost">70.000</span> <u>đ</u></p>
+              </div>
+              <div class="clothes-model-product__request">
+                <button class="clothes-model-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="clothes-model-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="clothes-model__item clothes-model__product5">
+              <img class="clothes-model__photo1" src="./assets/images/ao_polo_nam_unplo.jpg" alt="Ảnh Áo Polo Nam Unplo">
+              <div class="product-item-text">
+                <p class="product-id" hidden>005</p>
+                <a class="clothes-model__link-text" href="./sanpham.html"><p>Áo Polo Nam Unplo</p></a>
+                <p><span class="clothes-model-product__cost product__cost">100.000</span> <u>đ</u></p>
+              </div>
+              <div class="clothes-model-product__request">
+                <button class="clothes-model-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="clothes-model-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="clothes-model__item clothes-model__product6">
+              <img class="clothes-model__photo2" src="./assets/images/giay_mlb.jpg" alt="Ảnh Giày MLB Nữ">
+              <div class="product-item-text">
+                <p class="product-id" hidden>006</p>
+                <a class="clothes-model__link-text" href="./sanpham.html"><p>Giày MLB Nữ</p></a>
+                <p><span class="clothes-model-product__cost product__cost">180.000</span> <u>đ</u></p>
+              </div>
+              <div class="clothes-model-product__request">
+                <button class="clothes-model-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="clothes-model-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="clothes-model__item clothes-model__product7">
+              <img class="clothes-model__photo3" src="./assets/images/ao_cham_bi_phoi_ren_nu.jpg" alt="Ảnh Áo Chấm Bi Phối Ren Nữ">
+              <div class="product-item-text">
+                <p class="product-id" hidden>007</p>
+                <a class="clothes-model__link-text" href="./sanpham.html"><p>Áo Chấm Bi Phối Ren</p></a>
+                <p><span class="clothes-model-product__cost product__cost">200.000</span> <u>đ</u></p>
+              </div>
+              <div class="clothes-model-product__request">
+                <button class="clothes-model-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="clothes-model-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="clothes-model__item clothes-model__product8">
+              <img class="clothes-model__photo4" src="./assets/images/giay_da_bong_twin.jpg" alt="Ảnh Giày Đá Bóng Twin Nam">
+              <div class="product-item-text">   
+                <p class="product-id" hidden>008</p>
+                <a class="clothes-model__link-text" href="./sanpham.html"><p>Giày Đá Bóng Twin</p></a>
+                <p><span class="clothes-model-product__cost product__cost">180.000</span> <u>đ</u></p>
+              </div>
+              <div class="clothes-model-product__request">
+                <button class="clothes-model-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="clothes-model-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+          </section>
+
+          <h2 class="menu__title menu__title--list2">Sách - Giáo Trình</h2>
+          <!-- Sách - Giáo Trình -->
+          <section class="books-product">
+            <div class="books__item books__product1">
+              <img class="books__photo1" src="./assets/images/giao_trinh_vtp_a2_1.jpg" alt="Ảnh Giáo Trình VTPA2">
+              <div class="product-item-text">          
+                <p class="product-id" hidden>009</p>
+                <a class="books__link-text" href="./sanpham.html"><p>Giáo Trình Vi Tích Phân A2</p></a>
+                <p><span class="books-product__cost product__cost">40.000</span> <u>đ</u></p>
+              </div>
+              <div class="books-product__request">
+                <button class="books-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="books-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="books__item books__product2">
+              <img class="books__photo2" src="./assets/images/developing_tatics_for_listening.jpg" alt="Ảnh Sách Tiếng Anh Developing Tactic">
+              <div class="product-item-text">
+                <p class="product-id" hidden>010</p>
+                <a class="books__link-text" href="./sanpham.html"><p>Sách Tiếng Anh Developing...</p></a>
+                <p><span class="books-product__cost product__cost">80.000</span> <u>đ</u></p>
+              </div>
+              <div class="books-product__request">
+                <button class="books-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="books-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="books__item books__product3">
+              <img class="books__photo3" src="./assets/images/giao_trinh_tthcm.jpg" alt="Ảnh Giáo Trình Tư Tưởng HCM">
+              <div class="product-item-text">
+                <p class="product-id" hidden>011</p>
+                <a class="books__link-text" href="./sanpham.html"><p>Giáo Trình Tư Tưởng HCM</p></a>
+                <p><span class="books-product__cost product__cost">10.000</span> <u>đ</u></p>
+              </div>
+              <div class="books-product__request">
+                <button class="books-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="books-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="books__item books__product4">
+              <img class="books__photo4" src="./assets/images/conan_97_1.jpg" alt="Ảnh Sách Truyện Tranh Conan Tập 97">
+              <div class="product-item-text">
+                <p class="product-id" hidden>012</p>
+                <a class="books__link-text" href="./sanpham.html"><p>Truyện Tranh Conan Tập...</p></a>
+                <p><span class="books-product__cost product__cost">15.000</span> <u>đ</u></p>
+              </div>
+              <div class="books-product__request">
+                <button class="books-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="books-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="books__item books__product5">
+              <img class="books__photo1" src="./assets/images/giao_trinh_lthdt.jpg" alt="Ảnh Giáo Trình Lập Trình HĐT">
+              <div class="product-item-text">
+                <p class="product-id" hidden>013</p>
+                <a class="books__link-text" href="./sanpham.html"><p>Giáo Trình Lập Trình Hướng...</p></a>
+                <p><span class="books-product__cost product__cost">10.000</span> <u>đ</u></p>
+              </div>
+              <div class="books-product__request">
+                <button class="books-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="books-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="books__item books__product6">
+              <img class="books__photo2" src="./assets/images/giao_trinh_mln_1.jpg" alt="Ảnh Sách Giáo Trình CN MLN">
+              <div class="product-item-text">
+                <p class="product-id" hidden>014</p>
+                <a class="books__link-text" href="./sanpham.html"><p>Giáo Trình Chủ Nghĩa Mác...</p></a>
+                <p><span class="books-product__cost product__cost">40.000</span> <u>đ</u></p>
+              </div>
+              <div class="books-product__request">
+                <button class="books-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="books-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="books__item books__product7">
+              <img class="books__photo3" src="./assets/images/giao_trinh_triet1.jpg" alt="Ảnh Sách Giáo Trình Triết Học Mác-Lênin">
+              <div class="product-item-text">
+                <p class="product-id" hidden>015</p>
+                <a class="books__link-text" href="./sanpham.html"><p>Giáo Trình Triết Học Mác...</p></a>
+                <p><span class="books-product__cost product__cost">40.000</span> <u>đ</u></p>
+              </div>
+              <div class="books-product__request">
+                <button class="books-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="books-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="books__item books__product8">
+              <img class="books__photo4" src="./assets/images/hinh_hoc_12_pho_thong.jpg" alt="Ảnh Sách Hình Học 12 Phổ Thông">
+              <div class="product-item-text">
+                <p class="product-id" hidden>016</p>
+                <a class="books__link-text" href="./sanpham.html"><p>Sách Hình Học 12 Phổ Thông</p></a>
+                <p><span class="books-product__cost product__cost">15.000</span> <u>đ</u></p>
+              </div>
+              <div class="books-product__request">
+                <button class="books-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="books-product__order  product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+          </section>
+
+          <h2 class="menu__title menu__title--list3">Các Sản Phẩm Thiết Yếu Khác</h2>
+          <!-- Các Sản Phẩm Thiết Yếu Khác -->
+          <section class="another-product">
+            <div class="another__item another__product1">
+              <img class="another__photo1" src="./assets/images/quat_mini_va_day_sac.jpg" alt="Ảnh Quạt Mini Và Dây Sạc">
+              <div class="product-item-text">
+                <p class="product-id" hidden>017</p>
+                <a class="another__link-text" href="./sanpham.html"><p>Quạt Mini Và Dây Sạc</p></a>
+                <p><span class="another-product__cost product__cost">58.000</span> <u>đ</u></p>
+              </div>
+              <div class="another-product__request">
+                <button class="another-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="another-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="another__item another__product2">
+              <img class="another__photo2" src="./assets/images/vinacal680ex_1.jpg" alt="Ảnh Máy Tính Vinacal 680EX">
+              <div class="product-item-text">
+                <p class="product-id" hidden>018</p>
+                <a class="another__link-text" href="./sanpham.html"><p>Máy Tính Vinacal 680EX</p></a>
+                <p><span class="another-product__cost product__cost">220.000</span> <u>đ</u></p>
+              </div>
+              <div class="another-product__request">
+                <button class="another-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="another-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="another__item another__product3">
+              <img class="another__photo3" src="./assets/images/binh_sieu_toc_lock_and_lock.jpg" alt="Ảnh Bình Siêu Tốc Lock & Lock">
+              <div class="product-item-text">
+                <p class="product-id" hidden>019</p>
+                <a class="another__link-text" href="./sanpham.html"><p>Bình Siêu Tốc Lock & Lock</p></a>
+                <p><span class="another-product__cost product__cost">120.000</span> <u>đ</u></p>
+              </div>
+              <div class="another-product__request">
+                <button class="another-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="another-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="another__item another__product4">
+              <img class="another__photo4" src="./assets/images/gau_bong_tiec_nho_xinh.jpg" alt="Ảnh Gấu Bông Tiệc Nhỏ Xinh">
+              <div class="product-item-text">
+                <p class="product-id" hidden>020</p>
+                <a class="another__link-text" href="./sanpham.html"><p>Gấu Bông Tiệc Nhỏ Xinh</p></a>
+                <p><span class="another-product__cost product__cost">20.000</span> <u>đ</u></p>
+              </div>
+              <div class="another-product__request">
+                <button class="another-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="another-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="another__item another__product5">
+              <img class="another__photo1" src="./assets/images/may_nhoi_bot_bear.jpg" alt="Ảnh Máy Nhồi Bột Bear">
+              <div class="product-item-text">
+                <p class="product-id" hidden>021</p>
+                <a class="another__link-text" href="./sanpham.html"><p>Máy Nhồi Bột Bear</p></a>
+                <p><span class="another-product__cost product__cost">80.000</span> <u>đ</u></p>
+              </div>
+              <div class="another-product__request">
+                <button class="another-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="another-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="another__item another__product6">
+              <img class="another__photo2" src="./assets/images/chao_chong_dinh_elmich.jpg" alt="Ảnh Chảo Chống Dính Elmich">
+              <div class="product-item-text">
+                <p class="product-id" hidden>022</p>
+                <a class="another__link-text" href="./sanpham.html"><p>Chảo Chống Dính Elmich</p></a>
+                <p><span class="another-product__cost product__cost">70.000</span> <u>đ</u></p>
+              </div>
+              <div class="another-product__request">
+                <button class="another-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="another-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="another__item another__product7">
+              <img class="another__photo3" src="./assets/images/coc_su_bat_trang.jpg" alt="Ảnh Cốc Sứ Bát Tràng">
+              <div class="product-item-text">
+                <p class="product-id" hidden>023</p>
+                <a class="another__link-text" href="./sanpham.html"><p>Cốc Sứ Bát Tràng</p></a>
+                <p><span class="another-product__cost product__cost">20.000</span> <u>đ</u></p>
+              </div>
+              <div class="another-product__request">
+                <button class="another-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="another-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="another__item another__product8">
+              <img class="another__photo4" src="./assets/images/keo_ma_vang_sk5.jpg" alt="Ảnh Kéo Mạ Vàng SK5">
+              <div class="product-item-text">
+                <p class="product-id" hidden>024</p>
+                <a class="another__link-text" href="./sanpham.html"><p>Kéo Mạ Vàng SK5</p></a>
+                <p><span class="another-product__cost product__cost">15.000</span> <u>đ</u></p>
+              </div>
+              <div class="another-product__request">
+                <button class="another-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="another-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+          </section>
+
+          <h2 class="menu__title menu__title--list4">Sản Phẩm Miễn Phí</h2>
+          <!-- Sản Phẩm Miễn Phí -->
+          <section class="free-product">
+            <div class="free__item free__product1">
+              <img class="free__photo1" src="./assets/images/truyen-naoko.jpg" alt="Ảnh Truyện Tranh Thủy Thủ Mặt Trăng">
+              <div class="product-item-text">
+                <p class="product-id" hidden>025</p>
+                <a class="free__link-text" href="./sanpham.html"><p>Truyện Tranh Thủy Thủ...</p></a>
+                <p><span class="free-product__cost product__cost">0</span> <u>đ</u></p>
+              </div>
+              <div class="free-product__request">
+                <button class="free-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="free-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="free__item free__product2">
+              <img class="free__photo2" src="./assets/images/truyen-doraemon.jpg" alt="Ảnh Truyện Tranh Doraemon Tập 14">
+              <div class="product-item-text">
+                <p class="product-id" hidden>026</p>
+                <a class="free__link-text" href="./sanpham.html"><p>Truyện Tranh Doraemon...</p></a>
+                <p><span class="free-product__cost product__cost">0</span> <u>đ</u></p>
+              </div>
+              <div class="free-product__request">
+                <button class="free-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="free-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="free__item free__product3">
+              <img class="free__photo3" src="./assets/images/nuoc_rua_kinh_lens_clean_spray.jpg" alt="Ảnh Nước Rửa Kính Spray">
+              <div class="product-item-text">
+                <p class="product-id" hidden>027</p>
+                <a class="free__link-text" href="./sanpham.html"><p>Nước Rửa Kính Spray Chai...</p></a>
+                <p><span class="free-product__cost product__cost">0</span> <u>đ</u></p>
+              </div>
+              <div class="free-product__request">
+                <button class="free-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="free-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+            <div class="free__item free__product4">
+              <img class="free__photo4" src="./assets/images/cac_bai_toan_kho_hoa_vo_co.jpg" alt="Ảnh Sách Giải Chi Tiết Các Bài Toán Khó Hóa Vô Cơ">
+              <div class="product-item-text">
+                <p class="product-id" hidden>028</p>
+                <a class="free__link-text" href="./sanpham.html"><p>Giải Chi Tiết Các Bài Toán...</p></a>
+                <p><span class="free-product__cost product__cost">0</span> <u>đ</u></p>
+              </div>
+              <div class="free-product__request">
+                <button class="free-product__add-to-cart add-to-cart" title="Thêm Vào Giỏ Hàng" type="submit">Thêm Vào Giỏ</button>
+                <button class="free-product__order product__order" title="Đặt Ngay" type="submit">Đặt Ngay</button>
+              </div>
+            </div>
+          </section>
+        </section>
+      </article>
+    </main>
+
+    <footer class="page__footer">
+      <div class="footer-items">
+        <div class="footer-items__box1">
+          <h3 class="footer-items__box1--title">CHĂM SÓC KHÁCH HÀNG</h3>
+          <div class="footer-items__box1--content">
+            <p><a href="./vechungtoi.html">Giới Thiệu</a></p>
+            <p><a href="./vechungtoi.html">Liên Hệ</a></p>
+            <p><a href="./vechungtoi.html">Chính Sách Vận Chuyển</a></p>
+            <p><a href="./vechungtoi.html">Chính Sách Hoàn Tiền</a></p>
+            <p><a href="./vechungtoi.html">Câu Hỏi Thường Gặp</a></p>
+            <p><a href="./vechungtoi.html">Bảo Mật Thông Tin</a></p>
+            <p><a href="./vechungtoi.html">Tại Sao Nên Chọn TDS Corporation?</a></p>
+          </div>
+        </div>
+        <div class="footer-items__box2">
+          <h3 class="footer-items__box2--title">THỜI GIAN LÀM VIỆC</h3>
+          <div class="footer-items__box2--content">
+            <ul class="work-timing">
+              <li>Thứ Hai: 07:30 - 22:00</li>
+              <li>Thứ Ba: 07:30 - 22:00</li>
+              <li>Thứ Tư: 07:30 - 22:00</li>
+              <li>Thứ Năm: 07:30 - 22:00</li>
+              <li>Thứ Sáu: 07:30 - 22:00</li>
+              <li>Thứ Bảy: 07:30 - 22:00</li>
+              <li>Chủ Nhật: 07:30 - 22:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-items__box3">
+          <h3 class="footer-items__box3--title">KẾT NỐI VỚI CHÚNG TÔI</h3>
+          <div class="footer-items__box3--content">
+            <a class="contact-us-facebook__link" href="https://www.facebook.com/"><img class="facebook-icon" src="./assets/images/fb.jpg" alt="Ảnh icon facebook"></a>
+            <a class="contact-us-instagram__link" href="https://www.instagram.com/"><img class="instagram-icon" src="./assets/images/instagram.jpg" alt="Ảnh icon instagram"></a>
+            <a class="contact-us-twitter__link" href="https://www.twitter.com/"><img class="twitter-icon" src="./assets/images/twitter.jpg" alt="Ảnh icon twitter"></a>
+            <a class="contact-us-pinterest__link" href="https://www.pinterest.com/"><img class="pinterest-icon" src="./assets/images/pinterest.jpg" alt="Ảnh icon pinterest"></a>
+          </div>  
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <hr>
+        <p class="footer-copyright__text">&copy Bản quyền thuộc về TDS Corporation</p>
+      </div>
+    </footer>
+
+    <section class="cart">
+      <div class="cart-close js-cart-close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <h2><i class="fa fa-shopping-cart form__icon-cart"></i> Giỏ Hàng</h2>
+      <form action="">
+        <table class="list-products">
+          <thead class="list-head">
+            <tr>
+              <th>Sản Phẩm</th>
+              <th>Giá</th>
+              <th>Số Lượng</th>
+              <th>Chọn</th>
+            </tr>
+          </thead>
+          <tbody class="list-body">
+            <!-- <tr>
+              <td style="display: flex; align-items: center;"><img width="70px" src="./assets/images/ao_con_meo.jpg" alt="Áo con mèo"><span class="product-title">Áo Con Mèo</span></td>
+              <td><span>40000</span></td>
+              <td><input style="width: 30px; outline: none; text-align: center;" type="number" value="1" min="1"></td>
+              <td style="cursor: pointer;">Xóa</td>
+            </tr>
+            <tr>
+              <td style="display: flex; align-items: center;"><img width="70px" src="./assets/images/ao_con_meo.jpg" alt="Áo con mèo"><span class="product-title">Áo Con Mèo</span></td>
+              <td><span>40000</span></td>
+              <td><input style="width: 30px; outline: none; text-align: center;" type="number" value="1" min="1"></td>
+              <td style="cursor: pointer;">Xóa</td>
+            </tr> -->
+          </tbody>
+        </table>
+        <div class="price-total" style="text-align: right;">
+          <p style="font-weight: bold;">Tổng tiền: <span>0</span> <u>đ</u></p>
+        </div>
+        <button class="submit-cart__btn">Chốt đơn</button>
+      </form>
+    </section>
+
+    <script src="./assets/js/barscript.js"></script>
+    <script src="./assets/js/modal.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/slick_sanpham.js"></script>
+    <script src="./assets/js/cart.js"></script>
+  </body>
+</html>

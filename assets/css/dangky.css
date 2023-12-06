@@ -1,0 +1,244 @@
+/* ĐỊNH DẠNG FLEX LAYOUT CHO TRANG ĐĂNG KÝ */
+body {
+    background-image: url('../images/background_secondhand_web.jpg');
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.page__header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FFDEAD;
+    box-shadow: 0 2px 3px 0 #00000049;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-bars {
+    display: none;
+}
+
+.page__header .nav__logo {
+    align-items: center;
+}
+
+.page__header .nav__logo a img {
+    width: 50px;
+    height: 50px;
+    background-color: #FFDEAD;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.page__header nav li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.page__header nav li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: bolder;
+    display: inline-block;
+    border-radius: 10px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.page__header nav .header-navbar__li--active,
+.page__header nav li:hover a {
+    color: #fff;
+    background-color: #000;
+}
+
+/* Main */
+.page__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.page__content .content-form {
+    background-color: #FFDEAD;
+    border: 1px solid #FFDEAD;
+    border-radius: 10px;
+    box-shadow: 5px 10px #00000049;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 38px);
+}
+
+.page__content .content-form h3 {
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.content-form .form-signup {
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.content-form .form-signup input {
+    background-color: #FFDEAD;
+    font-size: 16px;
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px 0 #00000049;
+    outline: none;
+}
+
+ .content-form .form-signup label {
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    font-size: 16px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.content-form .form-signup input:focus + label, 
+.content-form .form-signup input:valid + label {
+    top: 0;
+    font-size: 14px;
+    font-weight: bolder;
+    background-color: #FFDEAD;
+    transition: all 0.2s ease-in-out;
+}
+
+.content-form .form-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.content-form .form-button input, 
+.content-form .form-button a button {
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 7px;
+    width: 100px;
+    margin-top: 12px;
+}
+
+.content-form .form-button input:hover,
+.content-form .form-button a button:hover {
+    background-color: #333;
+}
+
+.content-form .form-button input:hover,a button:hover {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.content-form .form-aside {
+    text-align: center;
+    line-height: 20px;
+    margin-top: 42px;
+}
+
+.content-form .form-aside p a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+}
+
+.content-form .form-aside p a:hover {
+    text-decoration: underline;
+} 
+
+/* Footer */
+.page__footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    color: #000;
+    font-size: 18px;
+    background-color: #FFDEAD;
+    text-align: center;
+    line-height: 80px;
+}
+
+/* Mobile */
+@media (min-width: 360px) and (max-width: 740px) {
+    /* HEADER */
+    .page__header {
+        width: 100%;
+    }
+
+    .page__header .nav__search {
+        width: 80%;
+    }
+
+    .page__header .header-bars {
+        display: block;
+        font-size: 2rem;
+        margin-right: auto;
+        margin-left: 70%;
+    }
+
+    .page__header .nav__search a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .page__header nav {
+        position: fixed;
+        top: 95px;
+        right: 0;
+        left: 0;
+        padding: 10px 0;
+        margin: 5px 0;
+        border: 1px solid #000;
+        text-align: center;
+        background-color: antiquewhite;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* Cài đặt sự kiện khi click vào header-bar thì thanh nav hiện lên */
+    nav.open {
+        display: block;
+    }
+
+    .page__header nav li {
+        display: block;
+    }
+
+    .page__header nav li a {
+        font-size: 12px;
+    }
+
+    /* CONTENT */
+    .content__article {
+        top: 300px;
+    }
+
+    .page__content .content-form {
+        font-size: 9px;
+    }
+
+    /* FOOTER */
+    .page__footer {
+        height: auto;
+    }
+}

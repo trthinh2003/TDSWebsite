@@ -1,0 +1,638 @@
+/* SẢN PHẨM */
+.page__content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    min-height: 3000px;
+}
+
+.page__content .banner {
+    margin-top: 100px;
+}
+
+.page__content .swap-banner img {
+    width: 100%;
+    height: auto;
+}
+
+.swap-banner {
+    position: absolute;
+}
+
+.swap-banner__photo1,
+.swap-banner__photo2 {
+    width: 100%;
+    opacity: 1.0;
+    margin-top: 5px;
+    transition: 1s ease-in-out;
+}
+
+.swap-banner__photo1:hover {
+    opacity: 1.0;
+}
+
+.swap-banner__photo2:hover {
+    opacity: 0.0;
+}
+
+.content__article {
+    position: relative;
+    top: 770px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content__article .menu__title {
+    background-color: #FFDEAD;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+}
+
+.content__article .menu__title--list1,
+.content__article .clothes-model-product {
+    margin: 30px 0;
+}
+
+.content__article .clothes-model-product,
+.content__article .books-product,
+.content__article .another-product,
+.content__article .free-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content__article .clothes-model-product .clothes-model__item,
+.content__article .books-product .books__item,
+.content__article .another-product .another__item,
+.content__article .free-product .free__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height: 380px;
+    width: 25%;
+}
+
+.clothes-model-product .clothes-model__item,
+.books-product .books__item,
+.another-product .another__item,
+.free-product .free__item {
+    transition: all 0.3s ease-in-out;
+}
+
+.clothes-model-product .clothes-model__item:hover,
+.books-product .books__item:hover,
+.another-product .another__item:hover,
+.free-product .free__item:hover {
+    transform: scale(1.1);
+}
+
+.clothes-model-product .clothes-model__item img,
+.books-product .books__item img,
+.another-product .another__item img,
+.free-product .free__item img {
+    max-width: 260px;
+    height: 280px;
+    cursor: pointer;
+}
+
+.clothes-model-product .clothes-model__item .product-item-text p,
+.books-product .books__item .product-item-text p,
+.another-product .another__item .product-item-text p,
+.free-product .free__item .product-item-text p {
+    text-align: center;
+}
+
+.clothes-model-product .clothes-model__item a,
+.books-product .books__item a,
+.another-product .another__item a,
+.free-product .free__item a {
+    color: #000;
+    font-size: 18px;
+}
+
+.clothes-model-product .clothes-model__item span,
+.books-product .books__item span,
+.another-product .another__item span,
+.free-product .free__item span {
+    font-size: 20px;
+}
+
+.clothes-model__item .clothes-model-product__request,
+.books__item .books-product__request,
+.another__item .another-product__request,
+.free__item .free-product__request {
+    margin-top: 5px;
+}
+
+.clothes-model__item .clothes-model-product__request button,
+.books__item .books-product__request button,
+.another__item .another-product__request button,
+.free__item .free-product__request button {
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.clothes-model__item .clothes-model-product__request .clothes-model-product__add-to-cart,
+.books__item .books-product__request .books-product__add-to-cart,
+.another__item .another-product__request .another-product__add-to-cart,
+.free__item .free-product__request .free-product__add-to-cart {
+    background-color: #00D15E;
+    color: #fff;
+}
+
+.clothes-model__item .clothes-model-product__request .clothes-model-product__add-to-cart:hover,
+.books__item .books-product__request .books-product__add-to-cart:hover,
+.another__item .another-product__request .another-product__add-to-cart:hover,
+.free__item .free-product__request .free-product__add-to-cart:hover {
+    background-color: #00d15e26;
+    color: #00D15E;
+}
+
+.clothes-model__item .clothes-model-product__request .clothes-model-product__order,
+.books__item .books-product__request .books-product__order,
+.another__item .another-product__request .another-product__order,
+.free__item .free-product__request .free-product__order {
+    background-color: #FFC837;
+    color: #fff;
+}
+
+.clothes-model__item .clothes-model-product__request .clothes-model-product__order:hover,
+.books__item .books-product__request .books-product__order:hover,
+.another__item .another-product__request .another-product__order:hover,
+.free__item .free-product__request .free-product__order:hover {
+    background-color: #FFC83726;
+    color: #FFC837;
+}
+
+.content__article .menu__title--list2,
+.content__article .books-product {
+    margin: 30px 0;
+}
+
+.content__article .menu__title--list3,
+.content__article .another-product {
+    margin: 30px 0;
+}
+
+.content__article .menu__title--list4,
+.content__article .free-product {
+    margin: 30px 0;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 100;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    border-radius: 10px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.5s;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-header i {
+    margin-right: 16px;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+#buy-product {
+    background-color: #009688;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+}
+
+#buy-product:hover {
+    opacity: 0.9;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-footer a {
+    color: #2196f3
+}
+
+.modal-footer a:hover {
+    text-decoration: underline;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slick-track {
+    width: 1200px;
+}
+
+/* Giỏ Hàng */
+.cart {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;  
+}
+
+.cart {
+    position: fixed;
+    height: 100vh;
+    width: 30%;
+    right: 0;
+    top: 0;
+    background-color: #20B2AA	;
+    padding: 12px 20px;
+    z-index: 100;
+    overflow-y: scroll;
+    display: none;
+}
+
+.cart.open {
+    display: block;
+}
+
+.cart-close {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+.cart-close:hover {
+    opacity: 1;
+}
+
+.cart h2 {
+    margin-bottom: 30px;
+}
+
+.cart table {
+    width: 100%;
+}
+
+.cart table thead tr th:first-child {
+    text-align: center;
+}
+
+.cart table tr td {
+    border-bottom: 1px solid #ddd;
+    padding: 2px 0;
+}
+
+.cart table thead tr th:last-child,
+.cart table tbody tr td:last-child {
+    text-align: right;
+}
+
+.cart .submit-cart__btn {
+    margin-top: 8px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #FFC837;
+}
+
+.cart .submit-cart__btn:hover {
+    opacity: 0.9;
+}
+
+/* Trang trí cho bảng trong cart */
+.list-products {
+    border-collapse: collapse;
+    width: calc(100% - 10px);
+}
+
+.list-head th {
+    background-color: #17a2b8;
+    border: 1px solid black;
+    padding: 10px 3px;
+}
+
+:is(.list-body) :is(td, th) {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+.list-body tr {
+    background-color: #ccc;
+}
+
+.list-body tr td {
+    border: 1px solid black;
+}
+
+.list-body tr td:not(:nth-child(3)) {
+    text-align: center;
+}
+
+.list-body tr td:nth-child(4):hover {
+    color: #CD853F;
+}
+
+/* Responsive */
+
+/* Tablet, Ipad */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* HEADER */
+    .page__content {
+        min-height: 3020px;
+    }
+
+    .page__header {
+        width: 100%;
+    }
+
+    .page__header form {
+        width: 295px;
+    }
+    
+    .page__header .search__form .form__input-text {
+        width: 220px;
+        font-size: 10px;
+    }
+
+    .page__header nav li a {
+        line-height: 30px;
+        padding: 0 2px;
+        font-size: 12px;
+    }
+
+    .nav__search .shopping-cart {
+        margin-left: -38px;
+        margin-bottom: 2px;
+    }
+
+    .form__button-icon {
+        border: solid 1px black;
+        border-radius: 10%;
+        padding: 1px 3px;
+        width: 3px;
+    }
+
+    /* CONTENT */
+    .content__article {
+        top: 468px;
+    }
+
+    .content__article .menu__section .clothes-model__item img,
+    .content__article .menu__section .books__item img,
+    .content__article .menu__section .another__item img,
+    .content__article .menu__section .free__item img {
+        width: 100%;
+        height: 190px;
+    }
+
+    .content__article .menu__section .clothes-model__item p,
+    .content__article .menu__section .books__item p,
+    .content__article .menu__section .another__item p,
+    .content__article .menu__section .free__item p {
+        font-size: 12px;
+    }
+
+    .content__article .menu__section .clothes-model__item span,
+    .content__article .menu__section .books__item span,
+    .content__article .menu__section .another__item span,
+    .content__article .menu__section .free__item span {
+        font-size: 18px;
+    }
+
+    .content__article .menu__section .clothes-model__item button,
+    .content__article .menu__section .books__item button,
+    .content__article .menu__section .another__item button,
+    .content__article .menu__section .free__item button {
+        font-size: 10px;
+    }
+
+    .content__article .clothes-model-product .clothes-model__item,
+    .content__article .books-product .books__item,
+    .content__article .another-product .another__item,
+    .content__article .free-product .free__item {
+        height: 275px;
+        margin: 0 15px;
+    }
+
+    .clothes-model__item .clothes-model-product__request button,
+    .books__item .books-product__request button,
+    .another__item .another-product__request button,
+    .free__item .free-product__request button {
+        margin: 0 1px;
+        padding: 8px;
+    }
+    .cart {
+        width: 50%;
+    }
+
+    /* FOOTER */
+    .page__footer {
+        height: 215px;
+    }
+
+    .footer-items__box1, .footer-items__box2, .footer-items__box3 {
+        font-size: 10px;
+    }
+}
+
+/* Mobile */
+@media (min-width: 360px) and (max-width: 740px) {
+    /* HEADER */
+    .page__content {
+        min-height: 2375px;
+    }
+
+    .page__header {
+        width: 100%;
+    }
+
+    .page__header .nav__search {
+        width: 80%;
+    }
+
+    .page__header .header-bars {
+        display: block;
+        font-size: 2rem;
+        margin-right: auto;
+        margin-left: 10%;
+    }
+
+    .page__header .nav__search a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav__search .form__button-icon {
+        margin-bottom: 3px;
+    }
+
+    .form__button-icon {
+        border: solid 1px black;
+        border-radius: 10%;
+        padding: 1px 3px;
+        width: 3px;
+    }
+
+    .page__header nav {
+        position: fixed;
+        top: 95px;
+        right: 0;
+        left: 0;
+        padding: 10px 0;
+        margin: 5px 0;
+        border: 1px solid #000;
+        text-align: center;
+        background-color: antiquewhite;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* Cài đặt sự kiện khi click vào header-bar thì thanh nav hiện lên */
+    nav.open {
+        display: block;
+    }
+
+    .page__header nav li {
+        display: block;
+    }
+
+    .page__header nav li a {
+        font-size: 12px;
+    }
+
+    .nav__search .search__form .form__input-text {
+        height: 30px;
+        width: 170px;
+        font-size: 8px;
+    }
+
+    /* CONTENT */
+    .content__article {
+        top: 215px;
+    }
+
+    .content__article .menu__title { 
+        font-size: 20px;
+    }
+
+    .content__article .menu__title--list2,
+    .content__article .menu__title--list3,
+    .content__article .menu__title--list4 {
+        margin: 15px 0;
+    }
+
+    .clothes-model-product a,
+    .content__article .books-product a,
+    .content__article .another-product a,
+    .content__article .free-product a {
+        font-size: 18px;
+    }
+
+    .content__article .clothes-model-product .clothes-model__item,
+    .content__article .books-product .books__item,
+    .content__article .another-product .another__item,
+    .content__article .free-product .free__item {
+        width: 280px;
+        margin: 15px 35px;
+        padding-bottom: 15px;
+    }
+
+    .cart {
+        width: calc(100% - 50px);
+    }
+
+    /* FOOTER */
+    .page__footer {
+        height: 230px;
+    }
+
+    .footer-items__box2 {
+        display: none;
+    }
+
+    .footer-items__box1, .footer-items__box3 {
+        font-size: 10px;
+    }
+}
